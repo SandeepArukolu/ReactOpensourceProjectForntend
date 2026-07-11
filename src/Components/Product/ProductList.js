@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
-import {  BootstrapTable ,TableHeaderColumn } from 'react-bootstrap-table';
+//import {  BootstrapTable ,TableHeaderColumn } from 'react-bootstrap-table';
 //import {    } from 'react-bootstrap-table-next';
 import { ItemsContext } from '../ItemContext/ItemsProvider';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
