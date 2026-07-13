@@ -13,15 +13,15 @@ function Login({setAuth}) {
 
   // Handle form submission
   const handleSubmit = async (e) => {
+    debugger
     setLoading(true);
     e.preventDefault();
 
     // Basic validation (just an example)
     if (Username !="" || Password != "") {
-        const API_BASE_URL = "https://localhost:7053/api/Test";
-
+        const API_BASE_URL = process.env.REACT_APP_API_URL;
       try {
-        const response = await axios.post(`${API_BASE_URL}/login`, {Username,Password}, {
+        const response = await axios.post(`${API_BASE_URL}/api/Test/login`, {Username,Password}, {
           headers: {
             "Content-Type": "application/json",
           },

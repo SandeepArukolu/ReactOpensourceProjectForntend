@@ -12,8 +12,8 @@ export const ItemsProvider = ({ children }) => {
 
   const fetchItems = async () => {
     try {
-        const API_BASE_URL = "https://localhost:7053/api/OpenSource";
-        const response = await axios.get(`${API_BASE_URL}/GetAllItems`, {
+        const API_BASE_URL = process.env.REACT_APP_API_URL;
+        const response = await axios.get(`${API_BASE_URL}/api/OpenSource/GetAllItems`, {
           headers: {
             "Content-Type": "application/json",
           },

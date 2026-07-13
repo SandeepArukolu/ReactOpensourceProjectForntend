@@ -79,10 +79,11 @@ useEffect(() => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    const API_BASE_URL = "https://localhost:7053/api/OpenSource";
+    const API_BASE_URL = process.env.REACT_APP_API_URL;
+    
     const token = localStorage.getItem('token');
     try {
-        const response = await axios.post(`${API_BASE_URL}/DownloadInvoice`, formData, {
+        const response = await axios.post(`${API_BASE_URL}/api/OpenSource/DownloadInvoice`, formData, {
             responseType: 'blob', // Set responseType here
             headers: {
               'Authorization': `Bearer ${token}`, // Add Bearer token
