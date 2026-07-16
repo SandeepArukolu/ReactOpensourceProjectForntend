@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { ItemsContext } from "../ItemContext/ItemsProvider";
 import {
   Button,
@@ -9,14 +9,14 @@ import {
 } from "reactstrap";
 
 const ProductList = () => {
-  const { items, fetchItems, updateItem } = useContext(ItemsContext);
+  const { items,updateItem } = useContext(ItemsContext);
 
   const [modal, setModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  useEffect(() => {
-    fetchItems();
-  }, [fetchItems]);
+  // useEffect(() => {
+  //   fetchItems();
+  // }, [fetchItems]);
 
   const toggleModal = () => setModal(!modal);
 
@@ -26,13 +26,12 @@ const ProductList = () => {
   };
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-
-    setSelectedItem((prev) => ({
-      ...prev,
-      value,
-    }));
-  };
+  const { value } = e.target;
+  setSelectedItem((prev) => ({
+    ...prev,
+    value,
+  }));
+};
 
   const handleUpdateItem = () => {
     updateItem(selectedItem);

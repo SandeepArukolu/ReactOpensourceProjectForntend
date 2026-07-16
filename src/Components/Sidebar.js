@@ -15,14 +15,14 @@ const Sidebar = () => {
           <Link to="/settings" className="hover:text-gray-400">Settings</Link>
         </li>
         <li className="mb-2">
-          <Link to="/components/invoice" className="hover:text-gray-400">Invoice</Link>
+          <Link to="/components/invoice" className="hover:text-gray-400">Download Invoice</Link>
         </li>
         <li className="mb-2">
           <Link to="/components/product/productList" className="hover:text-gray-400">Items</Link>
         </li>
-        <li className="mb-2">
+        {/* <li className="mb-2">
           <Link to="/components/addItem/insertItem" className="hover:text-gray-400">Add Item</Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

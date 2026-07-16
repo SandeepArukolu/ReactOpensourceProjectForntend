@@ -223,7 +223,7 @@ useEffect(() => {
           />
         </div>
         <button type="submit" disabled= {isSubmit} className="submit-btn">
-          Submit Invoice
+          Download Invoice
         </button>
       </form>
       {loading ? <Loader /> : <div></div>}
